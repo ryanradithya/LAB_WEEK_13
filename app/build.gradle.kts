@@ -4,9 +4,15 @@ plugins {
     kotlin("kapt")
 }
 
+
 android {
     namespace = "com.example.lab_week_13"
     compileSdk = 36
+
+    buildFeatures{
+        dataBinding = true
+    }
+
 
     defaultConfig {
         applicationId = "com.example.lab_week_13"
