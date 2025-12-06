@@ -1,28 +1,31 @@
 package com.example.lab_week_13.model
 
+import androidx.room.Entity
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
+@Entity(tableName = "movies", primaryKeys = [("id")])
+
 data class Movie(
-    val adult: Boolean = false,
-    val backdrop_path: String? = null,
-    val id: Int = 0,
+    var adult: Boolean = false,
+    var backdrop_path: String? = "",
+    var id: Int = 0,
     @field:Json(name = "original_language")
-    val originalLanguage: String? = null,
+    var originalLanguage: String? = null,
     @field:Json(name = "original_title")
-    val originalTitle: String? = null,
-    val overview: String? = null,
-    val popularity: Float = 0f,
+    var originalTitle: String? = null,
+    var overview: String? = null,
+    var popularity: Float = 0f,
     @field:Json(name = "poster_path")
-    val posterPath: String? = null,
+    var posterPath: String? = null,
     @field:Json(name = "release_date")
-    val releaseDate: String? = null,
-    val title: String? = null,
-    val video: Boolean = false,
+    var releaseDate: String? = null,
+    var title: String? = null,
+    var video: Boolean = false,
     @field:Json(name = "vote_average")
-    val voteAverage: Float = 0f,
+    var voteAverage: Float = 0f,
     @field:Json(name = "vote_count")
-    val voteCount: Int = 0
+    var voteCount: Int = 0
 )
 
