@@ -1,0 +1,11 @@
+Ryan Radithya Putra/00000091429
+
+1. MVVM penting karena menjadi arsitektur yang memudahkan pengembangan kedepannya dengan memisahkan komponen-komponen aplikasi (UI dari business logic melalui ViewModel). Model : Movie.kt, View : MovieAdapter.kt, ViewModel : MovieViewModel.kt
+
+2. Data Binding tidak memerlukan logika updating (otomatis terupdate) pada UI, secara coding lebih cepat.
+
+3. Singleton Pattern penting untuk menjaga SATU akses database, dimana lebih dapat mengakibatkan race condition atau wasted resources (koneksinya berat).
+
+4. Menjembatani api dan ui melalui "penyimpanan sementara" dimana juga dihubungkan dengan Room untuk fallback. Menjadi satu sumber reliable untuk data dari api dan memungkinkan backup Room.
+
+5. Cara lain dapat menggunakan logika kode yang dapat di trigger dari beberapa hal seperti refresh manual, namun cara ini tidak timed. Cara yang lebih efisien adalah menggunakan BaaS seperti Firebase untuk memberi sinyal untuk refresh (tidak dependen pada Waktu random)
